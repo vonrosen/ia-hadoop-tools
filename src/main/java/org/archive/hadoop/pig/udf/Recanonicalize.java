@@ -28,6 +28,13 @@ public class Recanonicalize extends EvalFunc<String> {
 		converter.setSkipOnCanonFail(true);
 	}
 
+	public Recanonicalize(boolean isSurt, boolean isSetSkipOnCanonFail)
+	{
+		converter = new CDXMapper(isSurt);
+		converter.setNoRedirect(true);
+		converter.setSkipOnCanonFail(isSetSkipOnCanonFail);
+	}
+	
 	@Override
 	public String exec(Tuple tuple) throws IOException {
 		
