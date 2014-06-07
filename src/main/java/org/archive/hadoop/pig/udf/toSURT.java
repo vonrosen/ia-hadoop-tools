@@ -5,6 +5,6 @@ public class toSURT extends Recanonicalize {
 	
 	public toSURT()
 	{
-		super(true);
+		super(true, false);
 	}
 }
